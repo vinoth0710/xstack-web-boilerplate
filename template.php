@@ -10,10 +10,8 @@
     <?php
         // Include this when running locally
         include "local-css.php";
-    ?>
-    <?php
         // Include this when deploying to Azure
-        include "production-css.php";
+        // include "production-css.php";
     ?>
 
 </head>
@@ -24,14 +22,14 @@
         <div class="container-scroller">
             <!-- topnav -->
             <?php
-                include "../xstack-core/topnav.php";
+                include "topnav.php";
             ?>
             <!-- partial -->
             <div class="container-fluid page-body-wrapper">
                 <!-- right sidebar -->
                 <?php
                     // Comment this when running on localhost and uncomment during deployment
-                    include "../xstack-core/right-sidebar.php";
+                    // include "../xstack-core/right-sidebar.php";
                 ?>
                 <!-- left-sidebar -->
                 <?php
@@ -84,10 +82,8 @@
     <?php
         // Include this when running locally
         include "local-js.php";
-    ?>
-    <?php
         // Include this when running deploying to Azure
-        include "production-js.php";
+        // include "production-js.php";
     ?>
 
     <script src="js/sample.js"></script>
