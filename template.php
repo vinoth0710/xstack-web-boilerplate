@@ -6,17 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Title | xStack</title>
-    <!-- base:css -->
-    <link rel="stylesheet" href="../xstack-core/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../xstack-core/css/flag-icon.min.css">
-    <link rel="stylesheet" href="../xstack-core/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="../xstack-core/css/aos.css" />
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="../xstack-core/css/style.css">
-    <link rel="stylesheet" href="../xstack-core/css/simple-line-icons.css">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="../xstack-core/images/favicon.png" />
+
+    <?php
+        // Include this when running locally
+        include "local-css.php";
+    ?>
+    <?php
+        // Include this when deploying to Azure
+        include "production-css.php";
+    ?>
 
 </head>
 
@@ -32,6 +30,7 @@
             <div class="container-fluid page-body-wrapper">
                 <!-- right sidebar -->
                 <?php
+                    // Comment this when running on localhost and uncomment during deployment
                     include "../xstack-core/right-sidebar.php";
                 ?>
                 <!-- left-sidebar -->
@@ -64,10 +63,14 @@
                         <!-- put your main page content here
                         =======================================
                         end of main content -->
+                    
 
                     </div>
                     <!-- content-wrapper ends -->
-                    <?php include "../xstack-core/footer.php"; ?>
+                    <?php
+                        // Comment this when running on localhost and uncomment during deployment
+                        include "../xstack-core/footer.php";
+                    ?>
                     <!-- partial -->
                 </div>
                 <!-- main-panel ends -->
@@ -78,17 +81,15 @@
         <!-- container-scroller -->
     </div>
 
-    <!-- base:js -->
-    <script src="../xstack-core/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- inject:js -->
-    <script src="../xstack-core/js/off-canvas.js"></script>
-    <script src="../xstack-core/js/hoverable-collapse.js"></script>
-    <script src="../xstack-core/js/todolist.js"></script>
-    <script src="../xstack-core/js/dashboard.js"></script>
-    <script src="../xstack-core/js/home.js"></script>
-    <script src="../xstack-core/js/template.js"></script>
-    <script src="../xstack-core/js/logout.js"></script>
+    <?php
+        // Include this when running locally
+        include "local-js.php";
+    ?>
+    <?php
+        // Include this when running deploying to Azure
+        include "production-js.php";
+    ?>
+
     <script src="js/sample.js"></script>
 </body>
 </html>

@@ -222,7 +222,7 @@ error_reporting(0);
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="extras-page.php">
-                        <i class="mdi mdi-account-multiple-plus menu-icon"></i>
+                        <i class="mdi mdi-camera-image menu-icon"></i>
                         <span class="menu-title">Extra Staff</span>
                     </a>
                 </li>
